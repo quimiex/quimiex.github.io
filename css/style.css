@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
 
 :root{
   --red:#20c100;
 }
 
 *{
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin:0; padding:0;
   box-sizing: border-box;
   outline: none; border:none;
   text-decoration: none;
-  text-transform: capitalize;
   transition:all .2s linear;
 }
 
@@ -78,6 +77,45 @@ section{
 .btn:hover{
   color:#fff;
 }
+
+
+
+.btn11{
+  display: inline-block;
+  padding:.8rem 3rem;
+  border:.2rem solid var(--red);
+  color:var(--red);
+  cursor: pointer;
+  font-size: 2.5rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+}
+
+.btn11::before{
+  content: '';
+  position: absolute;
+  top:0; right: 0;
+  width:0%;
+  height:100%;
+  background:var(--red);
+  transition: .3s linear;
+  z-index: -1;
+}
+
+.btn11:hover::before{
+  width:100%;
+  left: 0;
+}
+
+.btn11:hover{
+  color:#fff;
+}
+
+
+
 
 header{
   position: fixed;
@@ -292,6 +330,10 @@ header .navbar a:hover{
   padding:1rem;
 }
 
+.gallery{
+  margin-top: 30px;
+}
+
 .gallery .box-container{
   display: flex;
   flex-wrap: wrap;
@@ -442,6 +484,7 @@ header .navbar a:hover{
 }
 
 .footer{
+  margin-top: 50px;
   background:#000;
   text-align: center;
 }
